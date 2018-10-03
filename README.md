@@ -15,9 +15,10 @@ This is a small clone of Trello, made in two small applications: [crello-api](ht
     git clone
     npm i
     npm start
+    # or use already precompiled files in dist dir
   ```
 
 ## Usage
-There is only one setting you should know about it, the URL of backend RoR server (normaly in development is http://localhost:3000), see the src/settings.js file
+There is only one setting you should know about it, the URL of backend RoR server (normaly in development is http://localhost:3000), see the src/settings.js file.
 
 Made with &#x2764; by [Sergey](https://github.com/cre-o).
