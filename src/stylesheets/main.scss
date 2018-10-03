@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
+@import url('https://use.fontawesome.com/releases/v5.1.0/css/all.css');
+
+@import '~bootstrap/scss/bootstrap';
+
+$white: #fff;
+$red: rgb(251, 0 ,7);
+$red50: rgba(251, 0 ,7,.5);
+$black50: rgba(0,0,0,.5);
+$yellow: #f7ff00;
+$green: rgb(106, 168, 79);
+$lime: #b0ff00;
+$grey: rgb(83,83,83);
+
+html {
+  font-size: 16px;
+  color: $grey;
+}
+
+#crello-app {
+  font-family: 'Source Sans Pro', sans-serif;
+
+  .colored-name {
+    span {
+      color: $red;
+    }
+    span > span {
+      color: $green;
+    }
+    span > span + span + span {
+      color: $lime;
+    }
+    span > span + span + span + span + span{
+      color: $yellow;
+    }
+  }
+
+  .b-boards {
+    .jumbotron {
+      @extend .colored-name;
+
+      sup {
+        color: $white;
+      }
+    }
+  }
+
+  .b-board {
+
+    .b-list {
+      span.list-name {
+        margin-left: 0.625rem;
+      }
+
+      .form-control {
+        display: inline-block;
+        width: auto;
+        margin-left: 0.625rem;
+      }
+
+      .b-drag-list {
+        padding: 0.5rem;
+        display: contents; // fallback...
+        display: inline-grid; // new browsers
+        .list-group-item {
+          display: list-item;
+          list-style: none;
+        }
+        cursor: move;
+
+        span {
+          cursor: auto;
+        }
+      }
+
+      .b-mod {
+        a {
+          display: inline-block;
+          text-decoration: none;
+          color: inherit;
+
+          &:hover {
+            color: $blue;
+          }
+        }
+
+        i {
+          margin-left: 0.3125rem;
+          margin-right: 0.3125rem;
+        }
+      }
+
+      .list-group .active {
+        background-color: $grey;
+        border-color: $grey;
+        border-bottom-left-radius: 0.25rem;
+        border-bottom-right-radius: 0.25rem;
+
+        margin-bottom: 2rem;
+      }
+    }
+
+  }
+
+  .navbar-brand {
+    @extend .colored-name;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+[v-cloak] > * {
+  display: none;
+}
+
+@keyframes apple-opacity {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+[v-cloak] > div {
+  opacity: 0;
+}
+
+[v-cloak]::before {
+  content: " ";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url('data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==');
+  margin: 0 auto;
+  margin-top: 30vh;
+}
+
+#crello-app:not([v-cloak]) > div {
+  animation: apple-opacity 3s ease;
+}
