@@ -132,7 +132,7 @@
           })
 
         } else {
-          $parent.error = 'Unexpected resource on edit operation'
+          that.$parent.error = 'Unexpected resource on edit operation'
         }
       },
       deleteResource (resourceType, object, parent = null) {
@@ -156,7 +156,7 @@
             console.log('You need to specify parent for "deleteResource" method')
           }
         } else {
-          $parent.error = 'Unexpected resource on delete operation'
+          that.$parent.error = 'Unexpected resource on delete operation'
         }
       },
       addNewList () {
