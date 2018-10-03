@@ -1,6 +1,6 @@
 # README
 
-# Crello-api
+# Crello-front
 This is a small clone of Trello, made in two small applications: [crello-api](https://github.com/cre-o/crello-api) as a backend and Vue.js application on a frontend (this repo).
 
 ![preview](https://user-images.githubusercontent.com/723379/46389351-f840cf80-c6d9-11e8-9955-05165a1960e5.png)
